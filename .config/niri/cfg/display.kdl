@@ -1,9 +1,14 @@
 // ────────────── Output Configuration ──────────────
-// You can run `niri msg outputs` to get the correct name for your displays.
-// You will have to remove "/-" and edit it before it takes effect.
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+// Samsung Odyssey OLED G8 G81SF — 32" 4K 240 Hz OLED
 
-/- output "DP-1" {
-    mode "2560x1440@359.979" // Set resolution and refresh rate
-    scale 1 // No scaling (use 2 for HiDPI)
+output "DP-1" {
+    mode "3840x2160@239.996"
+    scale 1.33333
+    variable-refresh-rate on-demand=true
+}
+
+// Enable VRR for Steam games.
+window-rule {
+    match app-id=r#"^steam_app_\d+$"#
+    variable-refresh-rate true
 }

@@ -180,6 +180,7 @@
                     "hidePassive": false,
                     "id": "Tray",
                     "pinned": [
+                        "Connected. Auckland, New Zealand"
                     ]
                 },
                 {
@@ -468,7 +469,7 @@
         "bluetoothRssiPollIntervalMs": 60000,
         "bluetoothRssiPollingEnabled": false,
         "disableDiscoverability": false,
-        "networkPanelView": "wifi",
+        "networkPanelView": "ethernet",
         "wifiDetailsViewMode": "grid"
     },
     "nightLight": {
@@ -690,7 +691,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "mosaic",
+        "wallhavenQuery": "abstract dark",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",
