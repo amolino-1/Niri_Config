@@ -6,13 +6,14 @@
 # Rosé Pine (Ghostty has it built-in)
 # (optional) automatic dark/light switching:
 # theme = Rose Pine
-theme = Neutron
+# theme = Neutron
+theme = TokyoNight Night
 
 background-opacity = 0.85
 background-opacity-cells = true
 
 # Font (with fallbacks; repeat font-family lines for fallback)
-font-family = "JetBrainsMonoNL Nerd Font"
+font-family = "JetBrainsMono Nerd Font"
 font-family = "FiraCode Nerd Font"
 font-family = "Hack Nerd Font"
 font-size = 12

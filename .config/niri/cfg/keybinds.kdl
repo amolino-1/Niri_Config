@@ -11,7 +11,8 @@ binds {
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Ghostty" { spawn "ghostty"; }
     Mod+Space                           hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "/usr/bin/qs -p /etc/xdg/quickshell/noctalia-shell/shell.qml ipc call launcher toggle"; }
-    CTRL+SHIFT+X                        hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    // CTRL+SHIFT+X                        hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    CTRL+SHIFT+X                        hotkey-overlay-title="Lock Screen: noctalia lock" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock && sleep 30 && niri msg action power-off-monitors"; }
     Mod+Shift+P                         hotkey-overlay-title="Session Menu: noctalia sessionMenu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
     Mod+W 				                { spawn "flatpak" "run" "com.vivaldi.Vivaldi" "--ozone-platform=wayland"; }
     F6                                  { spawn "/usr/bin/zsh" "/home/andrew/.config/niri/scripts/gammastep-dim-toggle.zsh"; }
@@ -51,10 +52,8 @@ binds {
     Mod+CTRL+Home                       { move-column-to-first; }
     Mod+CTRL+End                        { move-column-to-last; }
 
-    Mod+Shift+Left                      { focus-monitor-left; }
-    Mod+Shift+Right                     { focus-monitor-right; }
-    Mod+Shift+UP                        { focus-monitor-up; }
-    Mod+Shift+Down                      { focus-monitor-down; }
+    Mod+Shift+UP                        cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+Down                      cooldown-ms=150 { focus-workspace-down; }
 
     Mod+Shift+CTRL+Left                 { move-column-to-monitor-left; }
     Mod+Shift+CTRL+Right                { move-column-to-monitor-right; }

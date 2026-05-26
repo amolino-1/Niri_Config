@@ -36,8 +36,8 @@ return {
 				"vimls",
 			},
 
-			-- auto-install configured servers (with lspconfig)
-			automatic_installation = true, -- not the same as ensure_installed
+			-- You already enable servers manually in lspconfig.lua with vim.lsp.enable(...)
+			automatic_enable = false,
 		})
 
 		mason_tool_installer.setup({
@@ -49,7 +49,6 @@ return {
 				"markdownlint", -- markdown linter
 				"prettier", -- prettier formatter
 				"pylint", -- python linter
-				"shellharden", -- shell linter
 				"shellharden", -- shell linter
 				"stylua", -- lua formatter
 				"beautysh", -- shell formatter

@@ -1,24 +1,49 @@
-    prefer-no-csd
-    screenshot-path null
+prefer-no-csd
 
-    environment {
-        ELECTRON_OZONE_PLATFORM_HINT "auto"
-        QT_QPA_PLATFORM "wayland"
-        QT_QPA_PLATFORMTHEME "gtk3"
-        QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-        XDG_CURRENT_DESKTOP "niri"
-        XDG_SESSION_TYPE "wayland"
-    }
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
-    cursor {
-        xcursor-theme "capitaine-cursors"
-    }
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
 
-    debug {
-        // Allows notification actions and window activation from Noctalia.
-        honor-xdg-activation-with-invalid-serial
-    }
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "gtk3"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
 
-    hotkey-overlay {
-       skip-at-startup
+    XDG_CURRENT_DESKTOP "niri"
+    XDG_SESSION_TYPE "wayland"
+
+    // Helps with GTK 4 dead keys / Compose issues if you use them.
+    GTK_IM_MODULE "simple"
+}
+
+cursor {
+    xcursor-theme "breeze_cursors"
+    xcursor-size 30
+
+    hide-when-typing
+    hide-after-inactive-ms 1000
+
+    // xcursor-theme "capitaine-cursors"
+}
+
+overview {
+    zoom 0.45
+    backdrop-color "#111111"
+
+    workspace-shadow {
+        softness 40
+        spread 8
+        offset x=0 y=10
+        color "#00000070"
     }
+}
+
+hotkey-overlay {
+    skip-at-startup
+    hide-not-bound
+}
+
+debug {
+    // Allows notification actions and window activation from Noctalia.
+    honor-xdg-activation-with-invalid-serial
+}

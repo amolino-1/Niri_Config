@@ -3,8 +3,8 @@
 
 output "DP-1" {
     mode "3840x2160@239.996"
-    scale 1.33333
-    variable-refresh-rate on-demand=true
+    scale 1.3333333333333333
+    variable-refresh-rate on-demand=false
 }
 
 // Enable VRR for Steam games.
